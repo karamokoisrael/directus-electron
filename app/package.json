@@ -1,14 +1,15 @@
 {
-  "name": "electron-quick-start",
+  "name": "directus-elecron",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Directus application running with Electron js",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/karamokoisrael/directus-electron",
   "keywords": [
     "Electron",
+    "Directus",
     "quick",
     "start",
     "tutorial",
