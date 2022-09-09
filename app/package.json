@@ -18,5 +18,10 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^20.1.2"
+  },
+  "dependencies": {
+    "directus": "^9.17.4",
+    "i": "^0.3.7",
+    "npm": "^8.19.1"
   }
 }
