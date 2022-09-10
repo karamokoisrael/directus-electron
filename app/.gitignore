@@ -567,3 +567,4 @@ uploads/*
 
 
 release-builds/directus-elecron-*/
+build/*
