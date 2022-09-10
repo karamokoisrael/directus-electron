@@ -1,9 +1,55 @@
-# directus-electron
+# Directus electron
 
-**Clone and run for a quick way to see Directus with Electron in action.**
+This is a minimal Electron that allows you to run directus inside a desktop app.
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation. This app allows you to run directus inside a desktop app.
+### Version
+1.0.0
 
-## License
+## Usage
+
+### Installation
+
+Install the dependencies
+
+```sh
+$ npm install
+```
+
+### Serve
+To run electron
+
+```sh
+$ npm start
+```
+
+To run directus without electron
+
+```sh
+$ npm run start-directus
+```
+
+### To Package & Build
+
+For Windows
+
+```sh
+$ npm run package-win
+```
+
+For Mac
+
+```sh
+$ npm run package-mac
+```
+
+For Linux
+
+```sh
+$ npm run package-linux
+```
+
+### License
 
 [MIT License](LICENSE.md)
+
+

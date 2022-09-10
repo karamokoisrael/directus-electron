@@ -4,7 +4,11 @@
   "description": "A minimal Directus application running with Electron js",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "start-directus": "npx directus start",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shopping List\"",
+    "package-linux" : "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
   },
   "repository": "https://github.com/karamokoisrael/directus-electron",
   "keywords": [
@@ -18,7 +22,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^20.1.2"
+    "electron": "^20.1.2",
+    "electron-package": "^0.1.0"
   },
   "dependencies": {
     "directus": "^9.17.4",

@@ -564,3 +564,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 data.db
 uploads/*
+
+
+release-builds/directus-elecron-*/
