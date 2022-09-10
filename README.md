@@ -1,6 +1,6 @@
 # Directus electron
 
-This is a minimal Electron that allows you to run directus inside a desktop app.
+This is a minimal Electron project that allows you to run directus inside a desktop app.
 ![Image](./demo.png "a title")
 ### Version
 1.0.0
