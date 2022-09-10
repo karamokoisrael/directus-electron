@@ -1,5 +1,5 @@
 module.exports = {
-  appUrl: "https://le-bon-coursier.immoplus.ci",
+  appUrl: "http://localhost:8055",
   windowWidth: 800,
   windowHeight: 600,
 };
