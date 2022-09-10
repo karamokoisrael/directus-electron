@@ -17,7 +17,7 @@ Install the dependencies
 $ npm install
 ```
 
-### Configure
+### Configuration
 
 Edit app/config.js file
 
