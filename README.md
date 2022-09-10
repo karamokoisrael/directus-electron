@@ -2,7 +2,9 @@
 
 This is a minimal Electron project that allows you to run directus inside a desktop app.
 ![Image](./demo.png "a title")
+
 ### Version
+
 1.0.0
 
 ## Usage
@@ -15,17 +17,24 @@ Install the dependencies
 $ npm install
 ```
 
+### Configure
+
+Edit app/config.js file
+
+```javascript
+module.exports = {
+  appUrl: "https://yourdomain.com",
+  windowWidth: 800,
+  windowHeight: 600,
+};
+```
+
 ### Serve
+
 To run electron
 
 ```sh
 $ npm start
-```
-
-To run directus without electron
-
-```sh
-$ npm run start-directus
 ```
 
 ### To Package & Build
@@ -51,5 +60,3 @@ $ npm run package-linux
 ### License
 
 [MIT License](LICENSE.md)
-
-
