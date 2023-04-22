@@ -1,17 +1,18 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
-const server = require("directus/server");
 require("dotenv").config();
-const { fork } = require("child_process");
+// const { fork } = require("child_process");
+const cluster = require("cluster");
 
 const path = require("path");
 
 async function createServer() {
   return new Promise((resolve, reject) => {
     try {
-      const serverProcess = fork(
-        `${__dirname}/node_modules/directus/dist/start.js`
-      );
+      // const serverProcess = fork(
+      //   `${__dirname}/node_modules/directus/dist/start.js`
+      // );
+      require(`${__dirname}/node_modules/directus/dist/start.js`);
       resolve(true);
     } catch (error) {
       reject(error);
@@ -25,22 +26,21 @@ async function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "preloader.js"),
     },
   });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 
-  // Create and run directus server
-  await createServer();
-
-  // Load directus url
-  setTimeout(() => {
+  if (cluster.isMaster) {
     mainWindow.loadURL(`http://localhost:${process.env.PORT}`);
     mainWindow.focus();
-  }, 3000);
-
+    cluster.fork();
+  } else {
+    createServer(); // your electron main file
+  }
+  createServer();
   // Load the index.html of the app.
   // mainWindow.loadFile('index.html')
 }
